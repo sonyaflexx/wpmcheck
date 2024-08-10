@@ -1,4 +1,3 @@
-// ExerciseStore.ts
 import { makeAutoObservable } from "mobx";
 import { wordPool, punctuationMarks } from "../assets/wordPool";
 
@@ -27,12 +26,10 @@ class ExerciseStore {
         for (let i = 0; i < this.wordCount; i++) {
             let word = wordPool[Math.floor(Math.random() * wordPool.length)];
 
-            // Add numbers randomly if enabled
             if (this.numbers && Math.random() > 0.8) {
                 word += ` ${Math.floor(Math.random() * 100000)}`;
             }
 
-            // Add punctuation randomly if enabled
             if (addPunctuation && Math.random() > 0.8) {
                 word += punctuationMarks[Math.floor(Math.random() * punctuationMarks.length)];
             }
@@ -40,12 +37,10 @@ class ExerciseStore {
             words.push(word);
         }
 
-        // Capitalize the first letter of the first word
         if (this.punctuation && words.length > 0) {
             words[0] = this.capitalize(words[0]);
         }
 
-        // Ensure each sentence starts with a capital letter and ends with a period
         if (this.punctuation) {
             for (let i = 0; i < words.length; i++) {
                 if ([".", "!", "?"].includes(words[i].slice(-1))) {
@@ -54,7 +49,7 @@ class ExerciseStore {
                     }
                 }
             }
-            // Ensure the text ends with a period
+
             if (![".", "!", "?"].includes(words[words.length - 1].slice(-1))) {
                 words[words.length - 1] += ".";
             }

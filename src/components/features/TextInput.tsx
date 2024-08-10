@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, ChangeEvent, useState } from 'react';
 import { observer } from 'mobx-react-lite';
-import exerciseStore from '../store/ExerciseStore';
+import exerciseStore from '../../store/ExerciseStore';
 
 const TextInput: React.FC = observer(() => {
     const { input } = exerciseStore;
