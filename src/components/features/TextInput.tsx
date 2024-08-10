@@ -116,6 +116,7 @@ const TextInput: React.FC = observer(() => {
                 type="text"
                 value={input}
                 onChange={handleChange}
+                disabled={exerciseStore.isFinished}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 className="absolute left-0 top-0 w-full h-full opacity-0 cursor-default z-10"
