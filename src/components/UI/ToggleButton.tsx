@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ToggleButtonProps {
     isActive: boolean;
     onClick: () => void;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { observer } from 'mobx-react-lite';
 import exerciseStore from '../../store/ExerciseStore';
 import Modal from '../UI/Modal';

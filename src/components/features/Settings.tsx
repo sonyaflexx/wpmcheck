@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { observer } from 'mobx-react-lite';
 import exerciseStore from '../../store/ExerciseStore';
 import WordCountSelect from '../UI/WordCountSelect';

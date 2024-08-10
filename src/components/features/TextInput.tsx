@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, ChangeEvent, useState } from 'react';
+import { useEffect, useRef, ChangeEvent, useState } from 'react';
 import { observer } from 'mobx-react-lite';
 import exerciseStore from '../../store/ExerciseStore';
 
