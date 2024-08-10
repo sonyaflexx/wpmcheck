@@ -7,11 +7,11 @@ interface ToggleButtonProps {
 }
 
 const ToggleButton: React.FC<ToggleButtonProps> = ({ isActive, onClick, children }) => {
-    const activeClass = isActive ? 'text-main-color' : 'text-sub-alt-color';
-    const baseClass = 'hover:text-white transition-colors active:text-sub-alt-color';
-
     return (
-        <button onClick={onClick} className={`${activeClass} ${baseClass}`}>
+        <button
+            onClick={onClick}
+            className={`${isActive ? 'text-main-color' : 'text-sub-alt-color'} hover:text-white transition-colors active:text-sub-alt-color`}
+        >
             {children}
         </button>
     );
